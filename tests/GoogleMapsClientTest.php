@@ -44,7 +44,7 @@ class GoogleMapsClientTest extends \PHPUnit_Framework_TestCase
             ->setCity('city')
             ->setZipCode('zip');
 
-        $this->assertSame(['lat' => 20, 'lng' => 20],$client->getLatLong($address));
+        $this->assertSame(['lat' => 20, 'lng' => 20], $client->getLatLong($address));
     }
 
     /**
@@ -67,7 +67,6 @@ class GoogleMapsClientTest extends \PHPUnit_Framework_TestCase
             ->setCity('city')
             ->setZipCode('zip');
 
-         $client->getLatLong($address);
+        $client->getLatLong($address);
     }
-
 }
