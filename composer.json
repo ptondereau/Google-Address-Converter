@@ -1,0 +1,57 @@
+{
+    "name": "ptondereau/google-address-converter",
+    "type": "library",
+    "description": "Small tools to convert Address from google maps API",
+    "keywords": [
+        "ptondereau",
+        "google-address-converter"
+    ],
+    "homepage": "https://github.com/ptondereau/google-address-converter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pierre Tondereau",
+            "email": "pierre.tondereau@gmail.com",
+            "homepage": "https://github.com/ptondereau",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.6|~7.0",
+        "php-http/curl-client": "^1.7",
+        "php-http/httplug": "^1.1",
+        "php-http/discovery": "^1.2",
+        "php-http/client-common": "^1.4",
+        "php-http/message-factory": "^1.0",
+        "php-http/message": "^1.5",
+        "guzzlehttp/psr7": "^1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ptondereau\\GoogleAddressConverter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ptondereau\\Test\\GoogleAddressConverter\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
