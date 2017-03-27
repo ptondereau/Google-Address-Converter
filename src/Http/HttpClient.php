@@ -39,5 +39,4 @@ abstract class HttpClient
     }
 
     abstract public function getLatLong(Address $address);
-
 }

@@ -6,7 +6,6 @@ use Ptondereau\GoogleAddressConverter\Address;
 
 class AddressTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testSettersAndGetters()
     {
         $address = new Address();
