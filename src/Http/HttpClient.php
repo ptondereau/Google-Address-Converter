@@ -29,13 +29,13 @@ abstract class HttpClient
      *
      * @param null|string $uri
      *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return \Psr\Http\Message\StreamInterface
      */
     public function get($uri = null)
     {
         $request = new Request('GET', $uri);
 
-        return $this->httpClient->sendRequest($request);
+        return $this->httpClient->sendRequest($request)->getBody();
     }
 
     abstract public function getLatLong(Address $address);

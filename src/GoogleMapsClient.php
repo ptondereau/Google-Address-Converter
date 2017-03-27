@@ -48,7 +48,7 @@ class GoogleMapsClient extends HttpClient
     {
         $url = UrlBuilder::createUrl($this->url, $this->apiKey, AddressQueryBuilder::createFromAddress($address));
 
-        $response = json_decode((string) $this->get($url), true);
+        $response = json_decode($this->get($url), true);
 
         if (
             !isset($response['results'][0]['geometry']['location']['lat'])

@@ -30,6 +30,11 @@ class Address
     protected $zipCode;
 
     /**
+     * @var string
+     */
+    protected $country;
+
+    /**
      * @return string
      */
     public function getAddressLine1()
@@ -125,6 +130,26 @@ class Address
     public function setZipCode($zipCode)
     {
         $this->zipCode = $zipCode;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param string $country
+     *
+     * @return $this
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
 
         return $this;
     }
